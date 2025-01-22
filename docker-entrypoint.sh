@@ -17,4 +17,4 @@ exec java -jar /app/HentaiAtHome.jar \
     --data-dir=/app/data \
     --log-dir=/app/log \
     --download-dir=/app/download \
-    --temp-dir=/tmp
+    --temp-dir=/app/tmp

@@ -11,6 +11,7 @@ RUN apt update && apt install -y sqlite3 && apt clean && rm -rf /var/lib/apt/lis
 
 WORKDIR /app
 COPY docker-entrypoint.sh /docker-entrypoint.sh
+RUN mkdir /app/cache /app/download /app/data /app/log /app/tmp
 COPY --from=build /tmp/hath/HentaiAtHome.jar /app/HentaiAtHome.jar
 
 VOLUME /app/cache
