@@ -1,6 +1,6 @@
 FROM alpine:latest AS build
 RUN apk add --no-cache curl unzip
-ARG VERSION=1.6.4
+ARG VERSION
 RUN curl -L "https://repo.e-hentai.org/hath/HentaiAtHome_${VERSION}.zip" -o /tmp/hath.zip && \
     mkdir /tmp/hath/ && \
     unzip /tmp/hath.zip -d /tmp/hath/
