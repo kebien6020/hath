@@ -5,7 +5,7 @@ RUN curl -L "https://repo.e-hentai.org/hath/HentaiAtHome_${VERSION}.zip" -o /tmp
     mkdir /tmp/hath/ && \
     unzip /tmp/hath.zip -d /tmp/hath/
 
-FROM eclipse-temurin:23-jre-alpine
+FROM eclipse-temurin:8-jre-focal
 
 WORKDIR /app
 COPY docker-entrypoint.sh /docker-entrypoint.sh
