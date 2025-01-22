@@ -5,7 +5,9 @@ RUN curl -L "https://repo.e-hentai.org/hath/HentaiAtHome_${VERSION}.zip" -o /tmp
     mkdir /tmp/hath/ && \
     unzip /tmp/hath.zip -d /tmp/hath/
 
-FROM eclipse-temurin:8-jre-focal
+FROM eclipse-temurin:11
+
+RUN apt update && apt install -y sqlite3 && apt clean && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 COPY docker-entrypoint.sh /docker-entrypoint.sh
