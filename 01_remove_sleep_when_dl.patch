@@ -1,0 +1,11 @@
+diff --git a/src/hath/base/GalleryDownloader.java b/src/hath/base/GalleryDownloader.java
+--- a/src/hath/base/GalleryDownloader.java
++++ b/src/hath/base/GalleryDownloader.java
+@@ -92,7 +92,6 @@ public class GalleryDownloader implements Runnable {
+ 						
+ 						if(downloadState == GalleryFile.STATE_DOWNLOAD_SUCCESSFUL) {
+ 							++successfulFiles;
+-							sleepTime = 1000;
+ 						}
+ 						else if(downloadState == GalleryFile.STATE_ALREADY_DOWNLOADED) {
+ 							++successfulFiles;
